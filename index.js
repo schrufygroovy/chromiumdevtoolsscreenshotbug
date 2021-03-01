@@ -29,7 +29,7 @@ const start = async function() {
     clip.x += pageX;
     clip.y += pageY;
     
-    await page.waitForTimeout(5000);
+    await page.waitFor(5000);
     const result = await page._client.send('Page.captureScreenshot', {
         format: 'png',
         clip: processClip(clip),
