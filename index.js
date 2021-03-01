@@ -18,7 +18,7 @@ const start = async function() {
     const page = await browser.newPage();
     await page.setViewport({ width: 1024, height: 800 });
     
-    await page.goto('https://htmlpreview.github.io/?https://github.com/schrufygroovy/chromiumdevtoolsscreenshotbug/blob/master/index.html', { 'waitUntil': ['load', 'networkidle0']});
+    await page.goto('https://htmlpreview.github.io/?https://github.com/schrufygroovy/chromiumdevtoolsscreenshotbug/blob/master/pageundertest.html', { 'waitUntil': ['load', 'networkidle0']});
     
     const elementSelector = '.elementToScreenshot';
     const el = await page.$(elementSelector);
